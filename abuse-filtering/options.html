@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Block urls</title>
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <script src="http://axemclion.github.com/IndexedDBShim/dist/IndexedDBShim.min.js"></script> 
+    <style>
+body {
+  font-family: 'Lucida Grande', sans-serif;
+  font-size: 75%;
+  color: rgb(48, 57, 66);
+  cursor: default;
+  margin-left: 80px;
+  width: 600px;
+}
+button {
+  -webkit-padding-end: 10px;
+  -webkit-padding-start: 10px;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+  color: #444;
+  font: inherit;
+  margin: 0 1px 0 0;
+  outline: none;
+  text-shadow: 0 1px 0 rgb(240, 240, 240);
+}
+button:hover {
+  background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  color: black;
+}
+button:active {
+  background-image: -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7);
+  box-shadow: none;
+  text-shadow: none;
+}
+img {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+textarea {
+  width: 100%;
+}
+label, textarea, input, button {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+    </style>
+  </head>
+  <body>
+    <img src="block48.png">
+    <h1>Block urls</h1>
+
+    <p>Urls that start with one of the strings listed below are blocked. You can unblock urls by starting a line with a # character. </p>
+<div>
+    <label>
+      <b>Block urls</b><br>
+      <textarea id="blocked_urls" rows="30" cols="30"></textarea>
+    </label><br>
+
+    <label>
+      <input id="enabled" type="checkbox">Enable blocking
+    </label><br>
+
+    <button id="save">Save</button>
+</div>
+<div data-role="content">
+     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyftbZQG2lKtgCdXewIJ2VweF2eXniKzfBLGgLwbCEQvC9TBmmM/exec">
+       <input type="text" name="badwords">
+       <br>
+       <input type="submit" >
+</form>
+    </div>
+  
+    <script type="myscript.js"></script>
+    <script src="shared.js"></script>
+    <script src="options.js"></script>
+    <script type="sendmail.js"></script>
+   
+    
+  </body>
+</html>
